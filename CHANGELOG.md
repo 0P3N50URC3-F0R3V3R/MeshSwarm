@@ -2,6 +2,10 @@
 
 All notable changes to MeshSwarm. Newest first.
 
+### 2026-11-25
+#### Changed
+- MeshCrowd no longer ships a default tracker address. There is no central tracker: every operator runs their own MeshSwarm and adds its address to their server and clients. Nothing changes in the tracker itself.
+
 ### 2026-11-24
 #### Added
 - First release: a tracker that keeps a public, syncing list of MeshCrowd servers. `POST /announce` and `DELETE /announce` take a signed advert (base64url JSON plus an ed25519 signature; the first key to claim an address owns it), `GET /list` returns the verified adverts and `GET /peers` the known trackers.
